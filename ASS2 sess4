@@ -1,0 +1,34 @@
+class Parent{
+private void method1(){
+ System.out.println ("Parent's method1()");
+}
+public void method2() {
+ System.out.println ("Parent's method2()");
+method1();
+}
+}
+
+
+
+
+ class Child extends Parent {
+ public void method1() {
+ System.out.println ("Child's method1()");
+} 
+
+public static void main(String args[]) {
+Parent p = new Child();
+p.method2();
+}}
+
+
+
+
+
+EXPECTED OUTPUT:
+C. Prints : Parent's method2()
+ Parent's method1()
+
+
+BECAUSE WHEN IT CALLS METHOD 2 WHICH IS PUBLIC THE FIRST LINE IN METHOD2 GETS PRINTED AND IT
+IS CALLING METHOD1 WHICH IS PRIVATE SO ITS GET PRINTED IN NEXT LINE. 
